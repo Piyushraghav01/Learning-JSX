@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script type="text/babel">
+
+            function sum(){
+                let a = 10+5;
+                return 'sum';
+            }  
+            
+            const header = <h2>JSX Expression</h2>
+            function App(){
+                var name = "Alexa";
+                var age =10;
+                let demo =null;
+                let undef;
+                const bool = true;
+                return(
+                    <>
+                    <h1>JavaScript inside JSX</h1>
+                    {header}
+                    <p>String: {name}!</p>
+                    <p>Number: {age}</p>
+                    <p>null value: {demo}</p>
+                    <p>undefined value: {undef}</p>
+                    <p>Boolean value: {bool}</p>
+                    <p>Calling a function: {sum()}</p> 
+                    </>
+                )
+            }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </body>
+</html>
